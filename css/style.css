@@ -1,0 +1,77 @@
+body{
+	font-family: sans-serif;
+	color: #EF8200;
+	letter-spacing: -0.04em;
+	width: 500px;
+}
+
+h1,h2,h3{
+	color: #EF8200;
+	float: left;
+	display: block;
+}
+
+table{
+	border: 1px solid #EF8200;
+	width: 100%;
+	font-size: 11px;
+	border-radius: 8px;
+}
+
+
+table  tr  th{
+	background-color: #EF8200;
+	color: #FFFFFF;
+	border-radius: 3px;
+	padding: 3px 0 3px 0;
+}
+table  tr  td{
+	background-color: #FFF;
+	color: #000000;
+}
+table  tr.odd td{
+	background-color: #ffe9cc;
+	color: #000000;
+}
+
+p{
+	font-size: 11px;
+}
+
+
+td.date{
+	text-align: center;
+}
+
+td.etat{
+	text-align: center;
+}
+
+div.form-coli{
+	text-align: right;
+	height: 80px;
+}
+div.form-coli input.suivre{
+	background-color: #EF8200;
+	color: #FFF;
+	border-radius: 8px;
+	padding: 5px;
+	font-weight: bolder;
+}
+
+
+div.form-coli input.numero-suivre{
+	color: #EF8200;
+	border: 2px dotted  #EF8200;
+	border-radius: 8px;
+	padding: 5px;
+}
+
+div.logo{
+	width: 251px;
+	float: left;
+}
+
+p.mention{
+	font-size: 9px;
+}
