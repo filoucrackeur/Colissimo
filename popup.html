@@ -11,9 +11,12 @@
 	</div>
 
 	<div class="form-coli">
-		<form action="">
-			<input type="" placeholder="N° de coli à suivre" class="numero-suivre">
-			<input type="submit" value="Ajouter" class="suivre">
+		<form action="http://www.laposte.fr/outilsuivi/web/suiviInterMetiers.php" method="GET">
+	
+			<input type="hidden" name="key" value="d112dc5c716d443af02b13bf708f73985e7ee943" />
+			<input type="hidden" name="method" value="json" />
+			<input type="text" name="code" id="code" placeholder="N° de coli à suivre" class="code">
+			<input type="button" value="Ajouter" class="suivre" onclick="addFollowingPackage()">
 		</form>
 	</div>
 	<table>
@@ -81,7 +84,7 @@
 		A l'aide du numéro inscrit sur la preuve de dépôt (sous le code à barres), vous êtes informé de l'état de votre envoi dans le réseau postal.
 		Vous pouvez consulter le suivi de votre colis pendant 30 jours après son envoi.
 	</p>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
