@@ -1,88 +1,59 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="fr">
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <meta name="description" content="Colissimo suivez votre coli en ligne.">
+        <meta name="author" content="Philippe COURT <philippe.court@gmail.com>">
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	
-	<div class="logo">
-		<img src="img/logo_dark.png" alt="">
-	</div>
-
-	<div class="form-coli">
-		<form action="">
-			<input type="" placeholder="N° de coli à suivre" class="numero-suivre">
-			<input type="submit" value="Ajouter" class="suivre">
-		</form>
-	</div>
-	<table>
-		<tr>
-			<th>Référence du colis</th>
-			<th>Date</th>
-			<th>Etat</th>
-		</tr>
-		<tr class="odd">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="even">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="odd">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="even">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="odd">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="even">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="odd">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="even">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="odd">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr class="even">
-			<td class="reference-coli"><img src="img/boite.png" alt="" width="15px;" height="15px;"> N°K435J435</td>
-			<td class="date">15/01/2012</td>
-			<td class="etat">Livr&eacute;</td>
-		</tr>
-		<tr>
-			<td class="etat" colspan="3">Aucun coli suivi pour le moment</td>
-		</tr>
-	</table>
-
-	<p class="mention">
-		A l'aide du numéro inscrit sur la preuve de dépôt (sous le code à barres), vous êtes informé de l'état de votre envoi dans le réseau postal.
-		Vous pouvez consulter le suivi de votre colis pendant 30 jours après son envoi.
-	</p>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span12 page-header">
+                <h1>Colissimo <small>configuration</small></h1>
+            </div>
+            <div class="span12">
+                <form method="post" action="" name="form-add-colissimo">
+                    <input type="text" id="new-colissimo-code" name="new-colissimo-code" placeholder="Entrez un identifiant colissimo" class="span6"/>
+                    <button  type="button" class="btn" id="add-colissimo"  data-loading-text="vérification du coli...">Ajouter le colissimo</button>
+                </form>
+                
+            </div>
+            <div class="span12" id="message">
+                
+            </div>
+            <div class="span12">
+                <table class="table table-striped table-hover" id="colissimo-list">
+                    <thead>
+                      <tr>
+                          <th></th>
+                          <th>Référence</th>
+                          <th>Description</th>
+                          <th>Date</th>
+                          <th>Etat</th>
+                          <th></th>
+                      </tr>  
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+            </div>
+            <div class="span12">
+                <span class="label label-info">Information</span> <small> A l'aide du numéro inscrit sur la preuve de dépôt (sous le code à barres), vous êtes informé de l'état de votre envoi dans le réseau postal.
+                    Vous pouvez consulter le suivi de votre colis pendant 30 jours après son envoi.</small>
+            </div>
+        </div>
+    </div>
+    
+    
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+    	<script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
