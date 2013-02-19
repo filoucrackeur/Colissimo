@@ -1,4 +1,54 @@
 body{
-	font-family: sans-serif;
-	color: #EF8200;
+    font-family: sans-serif;
+    color: #EF8200;
+    /*background-image: url(../img/colissimo.png);*/
+    background-attachment:fixed;
+    background-position: top right;
+    background-repeat:no-repeat;
+}
+
+a{
+    color: #EF8200;
+}
+
+.label{
+    background-color: #EF8200;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: #EF8200;
+    background-image: -webkit-linear-gradient(top, #ffeb5b, #EF8200)
+}
+
+.btn-primary:hover{
+    background-color: #EF8200;
+    background-image: -webkit-linear-gradient(top, #ffeb5b, #EF8200)
+}
+
+.icon-orange{
+    color: #EF8200 !important;
+}
+.input-append, .input-prepend{
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+form{
+    margin: 0;
+}
+
+.alert{
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    tbody{
+        font-size: 0.8em;
+    }
 }

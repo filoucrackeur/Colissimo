@@ -12,41 +12,47 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="row-fluid">
             <div class="span12 page-header">
-                <h1>Colissimo <small>configuration</small></h1>
+                <h1>Colissimo <small>Mon espace</small></h1>
             </div>
-            <div class="span12">
-                <form method="post" action="" name="form-add-colissimo">
-                    <input type="text" id="new-colissimo-code" name="new-colissimo-code" placeholder="Entrez un identifiant colissimo" class="span6"/>
-                    <button  type="button" class="btn" id="add-colissimo"  data-loading-text="vérification du coli...">Ajouter le colissimo</button>
+        
+            <div class="span12 well well-small">
+                <form method="post" id="form-add-colissimo">
+                    <div class="input-append">
+                        <input type="text" class="input-xlarge" id="new-colissimo-code" name="new-colissimo-code" required maxlength="13" placeholder="Entrez le code colissimo ( 13 caractères )" class="span4"/>
+                        <button  type="button" class="btn btn-primary" id="add-colissimo"  data-loading-text="vérification du coli..."><i class="icon-plus-sign icon-white"></i> <strong>Ajouter le colissimo</strong></button>
+
+                    </div>
                 </form>
-                
-            </div>
-            <div class="span12" id="message">
-                
             </div>
             <div class="span12">
+                
+            <div id="message">
+                
+            </div>
                 <table class="table table-striped table-hover" id="colissimo-list">
                     <thead>
                       <tr>
-                          <th></th>
-                          <th>Référence</th>
-                          <th>Description</th>
-                          <th>Date</th>
-                          <th>Etat</th>
+                          <th class="hidden-phone"></th>
+                          <th class="muted">Réf.</th>
+                          <th class="muted hidden-phone">Type</th>
+                          <th class="muted hidden-phone">Date</th>
+                          <th class="muted">Etat</th>
                           <th></th>
                       </tr>  
                     </thead>
                     <tbody>
-                       
                     </tbody>
                 </table>
             </div>
-            <div class="span12">
-                <span class="label label-info">Information</span> <small> A l'aide du numéro inscrit sur la preuve de dépôt (sous le code à barres), vous êtes informé de l'état de votre envoi dans le réseau postal.
-                    Vous pouvez consulter le suivi de votre colis pendant 30 jours après son envoi.</small>
+        </div>
+        <div class="row">
+            <div class="span2">
+                <img src="img/logolaposte.gif">
             </div>
+          
         </div>
     </div>
     

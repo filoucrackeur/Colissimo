@@ -1,0 +1,17 @@
+{
+    "colissimo_name": {
+        "message": "Colissimo"
+    },
+    "colissimo_status": {
+        "message" : "Etat"
+    },
+    "colissimo_ajouter": {
+        "message" : "Ajouter"
+    },
+    "colissimo_placeholder": {
+        "message" : "Entrez un identifiant colissimo (13 caractères)"
+    },
+    "colissimo_loading": {
+        "message" : "Chargement en cours"
+    }
+}
