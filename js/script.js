@@ -1,5 +1,17 @@
-$(document).ready(function () {
+// google analytics
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38640044-1']);
+_gaq.push(['_trackPageview']);
 
+(function() {
+  var ga = document.createElement('script'); 
+  ga.type = 'text/javascript'; 
+  ga.async = true;
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; 
+  s.parentNode.insertBefore(ga, s);
+
+    $('#new-colissimo-code').focus();
     // Chargement de la liste des colis suivis
 
     reloadColissimoList();
@@ -88,7 +100,7 @@ $(document).ready(function () {
                 var colissimo = window.localStorage.getItem(key);
                 var coli = JSON.parse(colissimo);
                 $('#colissimo-list > tbody').prepend('<tr id="' + coli.code + '">\n\
-                                                                <td class="hidden-phone"><img src="img/coli.gif" width="50" /></td>\n\
+                                                                <td class="hidden-phone"><img src="../img/boite.png" width="50" /></td>\n\
                                                                 <td><a href="' + coli.link + '">' + coli.code + '</a></td>\n\
                                                                 <td class="hidden-phone">' + coli.client + '</td>\n\
                                                                 <td class="hidden-phone">' + coli.date + '</td>\n\
@@ -118,13 +130,14 @@ $(document).ready(function () {
         //window.location.reload();
     });
 
+    /**
+     * Create a simple text notification:
+     * @param string titre
+     * @param string message
+     */
     function displayNotification(titre, message) {
-        // Create a simple text notification:
-        var notification = webkitNotifications.createNotification(
-            'icon-small.png', // icon url - can be relative
-        titre, // notification title
-        message // notification body text
-        );
+        
+        var notification = webkitNotifications.createNotification('../icon-small.png',titre, message);
 
         notification.show();
         
@@ -137,6 +150,14 @@ $(document).ready(function () {
         text: 'R'
     });
     //chrome.i18n.getMessage("colissimo_status");
+    // button state demo
+    $('#add-colissimo').click(function () {
+        var btn = $(this)
+        btn.button('loading')
+        setTimeout(function () {
+            btn.button('reset')
+        }, 1000)
+    });
 
 
-});
+})();

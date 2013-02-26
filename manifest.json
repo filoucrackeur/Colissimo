@@ -4,15 +4,18 @@
   "name": "__MSG_colissimo_name__ ™",
   "description": "Suivez vos colis Colissimo en temps réel depuis leur préparation jusqu'à la livraison. Vous pouvez garder un historique 30 jours après la livraison. Cette extension n'est pas officielle mais utilise des services officiels",
   "version": "1.0",
-  "options_page": "options.html",
+  "homepage_url": "https://chrome.google.com/webstore/detail/colissimo/mfdnmofcchnnnkbkgccfioiejlhjmnij",
+  "options_page": "html/options.html",
   "permissions": [ 
     "tabs", "notifications",
     "http://*/",
     "https://*/"
   ], 
-  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "web_accessible_resources": [
-   "icon-small.png"
+    "icon-large.png",
+    "icon-small.png",
+    "img/glyphicons-halflings-white.png"
   ],
   "icons": {
     "16": "icon-bitty.png",
@@ -21,7 +24,7 @@
   },
   "default_locale": "fr",
   "background": { 
-    "scripts": ["js/bootstrap.min.js","js/jquery.min.js","js/background.js"]
+    "scripts": ["js/bootstrap.min.js","js/jquery.min.js","js/application.js","js/background.js"]
   },
 
   "content_scripts" : [
@@ -30,13 +33,14 @@
         "http://*/*",
         "https://*/*"
       ],
-      "js" : ["js/bootstrap.min.js","js/jquery.min.js","js/contentscript.js"],
+      "js" : ["js/jquery.min.js","js/contentscript.js"],
+      "css" : ["css/contentscript.css"],
       "run_at" : "document_idle",
-      "all_frames" : false
+      "all_frames" : true
     }
   ],
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "options.html"
+    "default_popup": "html/options.html"
   }
 }

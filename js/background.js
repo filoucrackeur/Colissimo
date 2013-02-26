@@ -16,10 +16,15 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
          
          $.get(url, function(json){
             var data = JSON.parse(json);
-            console.log(data);
+            //console.log(data);
              sendResponse(data);
             });
         
     }
     return true;
+});
+
+
+chrome.commands.onCommand.addListener(function(command) {
+  console.log('Command:', command);
 });

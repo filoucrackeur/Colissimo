@@ -25,7 +25,9 @@ a{
     background-image: -webkit-linear-gradient(top, #ffeb5b, #EF8200)
 }
 
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:disabled,
+.btn-primary:focus{
     background-color: #EF8200;
     background-image: -webkit-linear-gradient(top, #ffeb5b, #EF8200)
 }

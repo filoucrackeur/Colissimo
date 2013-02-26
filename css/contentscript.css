@@ -1,0 +1,72 @@
+
+.extension-colissimo .btn{
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 20px;   
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
+    margin-left: -1px;
+}
+
+
+
+.extension-colissimo .btn-primary{
+    background-color: #EF8200;
+    background-image: -webkit-linear-gradient(top, #ffeb5b, #EF8200)
+}
+
+.extension-colissimo .btn-primary:hover,
+.extension-colissimo .btn-primary:disabled,
+.extension-colissimo .btn-primary:focus{
+    background-color: #EF8200;
+    background-image: -webkit-linear-gradient(top, #ffeb5b, #EF8200)
+}
+
+.extension-colissimo .icon-orange{
+    color: #EF8200 !important;
+}
+.extension-colissimo .input-append, .extension-colissimo .input-prepend{
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    display: inline-block;
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    
+
+}
+
+
+.extension-colissimo button, .extension-colissimo input{
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+[class^="colissimo-icon-"],
+[class*="colissimo-icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/img/glyphicons-halflings.png');
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+
+.colissimo-icon-white{
+  background-image: url('chrome-extension://__MSG_@@extension_id__/img/glyphicons-halflings-white.png');
+}
+
+.colissimo-icon-plus-sign {
+  background-position: 0 -96px;
+}
