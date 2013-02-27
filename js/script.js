@@ -58,22 +58,18 @@ var lineColissimo = $('tbody').html();
             code: code
         },function(json){
             //console.log('stockage et enregistrement du tableau des colissimo');
-       
-            myStoredColissimo.colis.push(json);
-            stringifiedStoredColissimo = JSON.stringify(myStoredColissimo);
-            //console.log(stringifiedStoredColissimo);
-            window.localStorage.setItem('myStoredColissimo', stringifiedStoredColissimo);
-            displaySuccess("Votre colissimo à été ajouté à la liste des suivis !");
-            displayNotification("Votre colissimo à été ajouté à la liste des suivis !",'');
-            
-        });
-            // On fait les vérifications sur la saisie
-            //if (isValidColissimo(json) == true) {
+            if( isValidColissimo(json) == true ){
               
-           
+                myStoredColissimo.colis.push(json);
+                stringifiedStoredColissimo = JSON.stringify(myStoredColissimo);
+                //console.log(stringifiedStoredColissimo);
+                window.localStorage.setItem('myStoredColissimo', stringifiedStoredColissimo);
+                displaySuccess("Votre colissimo à été ajouté à la liste des suivis !");
+                displayNotification("Votre colissimo à été ajouté à la liste des suivis !",'');  
+            }
+            
                 //reloadColissimoList();
-            //}
-   
+        });
         return true;
     });
 
@@ -94,14 +90,14 @@ var lineColissimo = $('tbody').html();
     // Vérification qu'il s'agit bien d'un identifiant colissimo
     function isValidColissimo(colissimo) {
         //console.log(colissimo);
-        /*if( colissimo.status === false && colissimo.error !== null ){
+        if( colissimo.status === false && colissimo.error !== null ){
             displayError(colissimo.message);
             return false;
         } 
         if( window.localStorage.getItem(colissimo.code) ){
             displayError("Vous suivez déja ce colissimo");
             return false;
-        }*/
+        }
         //console.log('Demande vérification coli existe chez colissimo');
         return true;
     }
@@ -114,15 +110,10 @@ var lineColissimo = $('tbody').html();
         return true;
     }
 
-    // Suppression de la liste d'un colissmo
-    function removeColissimoById(id) {
-        //console.log('Demande de suppression des colissimo');
-        window.localStorage.removeItem(id);
-        //location.reload();
-        return true;
-    }
-
-
+    /*
+     * Rechagement de liste dans le tableau HTML
+     * @returns {undefined}
+     */
     function reloadColissimoList() {
         // On vide les resultats 
         $('tbody tr[class!=hidden]').remove();
@@ -147,13 +138,12 @@ var lineColissimo = $('tbody').html();
         var id = $(this).parent().parent().attr('id');
         
         for( i in myStoredColissimo.colis){
-            if( myStoredColissimo.colis[i] == id ){
+            if( myStoredColissimo.colis[i].code == id ){
                 delete myStoredColissimo.colis[i];
+                console.log('supprimer');
             }
         }
         
-        console.log(myStoredColissimo);
-        /*
         stringifiedStoredColissimo = JSON.stringify(myStoredColissimo);
         window.localStorage.removeItem('myStoredColissimo');
         window.localStorage.setItem('myStoredColissimo', stringifiedStoredColissimo);
@@ -161,10 +151,8 @@ var lineColissimo = $('tbody').html();
         $('#'+id).remove();
         displaySuccess("Votre colissimo N° "+id+" a été supprimé");
         displayNotification("Votre colissimo N° "+id+" a été supprimé",'');
-        */
-        return false;
         
-        //window.location.reload();
+        return false;
     });
 
     /**
