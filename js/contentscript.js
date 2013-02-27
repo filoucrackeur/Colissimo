@@ -11,20 +11,20 @@ if (regex.test(document.body.innerText)) {
   var foundColissimoCodes = document.body.innerText.match(regex);
 
   Object.keys(foundColissimoCodes).forEach(function (key) {
-       document.body.innerHTML = document.body.innerHTML.replace(foundColissimoCodes[key], '<span class="extension-colissimo input-append"><input type="text" class="input-xlarge" id="new-colissimo-code" name="new-colissimo-code"  maxlength="13" value="'+foundColissimoCodes[key]+'"><button type="button" class="btn btn-primary" id="add-colissimo" data-loading-text="Récupération colissimo"><i class="colissimo-icon-plus-sign colissimo-icon-white"></i> <strong></strong></button></span>');
+       //document.body.innerHTML = document.body.innerHTML.replace(foundColissimoCodes[key], '<span class="extension-colissimo input-append"><input type="text" class="input-xlarge" id="new-colissimo-code" name="new-colissimo-code"  maxlength="13" value="'+foundColissimoCodes[key]+'"><button type="button" class="btn btn-primary" id="add-colissimo" data-loading-text="Récupération colissimo"><i class="colissimo-icon-plus-sign colissimo-icon-white"></i> <strong></strong></button></span>');
       
         // recuperation des information en ligne
-        chrome.extension.sendMessage('mfdnmofcchnnnkbkgccfioiejlhjmnij', {
+        /*chrome.extension.sendMessage('mfdnmofcchnnnkbkgccfioiejlhjmnij', {
             type: 'getColissimo',
             code: foundColissimoCodes[key]
         }, function (json) {
             // On fait les vérifications sur la saisie
             if (isValidColissimo(json) == true) {
-                console.log('stockage et enregistrement du tableau des colissimo');
-                var colissimo = JSON.stringify(json);
-                window.localStorage.setItem(json.code, colissimo);
+                //console.log('stockage et enregistrement du tableau des colissimo');
+                //var colissimo = JSON.stringify(json);
+                //window.localStorage.setItem(json.code, colissimo);
             }
-        });
+        });*/
       
       
       

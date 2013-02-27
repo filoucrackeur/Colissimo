@@ -11,7 +11,7 @@
     "http://*/",
     "https://*/"
   ], 
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
   "web_accessible_resources": [
     "icon-large.png",
     "icon-small.png",
@@ -24,7 +24,7 @@
   },
   "default_locale": "fr",
   "background": { 
-    "scripts": ["js/bootstrap.min.js","js/jquery.min.js","js/application.js","js/background.js"]
+    "scripts": ["js/mustache.js","js/bootstrap.min.js","js/jquery.min.js","js/background.js"]
   },
 
   "content_scripts" : [

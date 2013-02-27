@@ -2,16 +2,34 @@
     "colissimo_name": {
         "message": "Colissimo"
     },
-    "colissimo_status": {
+    "column_ref": {
+        "message" : "Réf."
+    },
+    "column_message": {
         "message" : "Etat"
+    },
+    "column_type": {
+        "message" : "Type"
+    },
+    "column_date": {
+        "message" : "Date"
+    },
+    "colissimo_my_space": {
+        "message" : "Mon Espace"
     },
     "colissimo_ajouter": {
         "message" : "Ajouter"
+    },
+    "colissimo_remove": {
+        "message" : "Supprimer"
     },
     "colissimo_placeholder": {
         "message" : "Entrez un identifiant colissimo (13 caractères)"
     },
     "colissimo_loading": {
-        "message" : "Chargement en cours"
+        "message" : "Chargement en cours..."
+    },
+    "colissimo_ckecking": {
+        "message" : "Vérification en cours..."
     }
 }
